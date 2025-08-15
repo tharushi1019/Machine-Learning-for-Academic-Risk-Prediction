@@ -51,8 +51,8 @@ st.markdown("""
 @st.cache_resource
 def load_model_artifacts():
     try:
-        pipe = joblib.load("../artifacts/final_pipeline.joblib")
-        with open("../artifacts/label_classes.json", "r") as f:
+        pipe = joblib.load("artifacts/final_pipeline.joblib")
+        with open("artifacts/label_classes.json", "r") as f:
             class_labels = json.load(f)
         return pipe, class_labels
     except FileNotFoundError as e:
