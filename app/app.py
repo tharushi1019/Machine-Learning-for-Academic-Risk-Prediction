@@ -241,7 +241,7 @@ if page == "🏠 Home - Prediction":
                     proba_df = pd.DataFrame({
                         'Grade': grade_names,
                         'Probability': pred_proba
-                    }).sort_values('Probability', ascending=False)
+                    }).sort_values('Probability', ascending=True)
                     fig = px.bar(proba_df, x='Grade', y='Probability', 
                                title="Prediction Confidence by Grade",
                                color='Probability', color_continuous_scale='viridis')
