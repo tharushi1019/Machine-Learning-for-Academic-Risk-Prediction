@@ -370,10 +370,12 @@ elif page == "📊 Data Overview":
     
     with col_right:
         st.subheader("Grade Class Distribution")
-        grade_counts = sample_df['GradeClass'].value_counts().sort_index()
-        grade_names = ['A', 'B', 'C', 'D', 'F']
-        fig = px.pie(values=grade_counts.values, names=grade_names, 
-                    title="Grade Distribution")
+        # Ensure grade counts for all possible grades
+        all_grades = ['A', 'B', 'C', 'D', 'F']
+        grade_counts = sample_df['GradeClass'].value_counts().reindex(all_grades, fill_value=0)
+        
+        fig = px.pie(values=grade_counts.values, names=all_grades, 
+                     title="Grade Distribution")
         st.plotly_chart(fig, use_container_width=True)
         
         st.subheader("Parental Education Levels")
