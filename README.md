@@ -215,7 +215,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact & Support
 
 - **GitHub Issues**: For bug reports and feature requests
-- **Email**: [tharushinimnadi19@gmail.com] for direct inquiries
+- **Email**: [tharushinimnadee19@gmail.com](mailto:tharushinimnadee19@gmail.com) for direct inquiries
 - **Documentation**: Check the notebooks for detailed analysis
 
 ## 📚 References
